@@ -10,11 +10,15 @@
        class="post"
        v-for="(post, index) in posts"
        :key="index"
-       :class="'post' + post.id"
+       :class="'post_' + post.id"
       >
         <div class="post_header" v-text="post.title"></div>
         <div class="post_body" v-text="post.body"></div>
         <div class="post_footer" v-text="post.userId"></div>
+        <form class="post_edit">
+          <input type="text" v-model="post.title">
+          <textarea v-model="post.body"></textarea>
+        </form>
       </div>
     </div>
 
@@ -60,7 +64,21 @@ export default {
   .posts{
     max-width: 750px;
     width: 100%;
-    padding: 0 15px;
+    padding: 100px 15px;
     margin: 0 auto;
+    .post{
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .post_edit{
+        input{
+          width: 100%;
+        }
+        textarea{
+          width: 100%;
+        }
+      }
+    }
   }
 </style>
