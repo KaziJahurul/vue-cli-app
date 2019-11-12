@@ -5,7 +5,7 @@
     <counter></counter>
     <cupon-code></cupon-code>
     <br>
-    <button @click="editPost">Add data to post object</button>
+    <!-- <button @click="editPost">Add data to post object</button> -->
     <div class="posts">
       <div
        class="post"
