@@ -8,6 +8,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      // postData: [],
+    }
+  },
+  
+}
+</script>
+
 
 <style lang="scss">
 #app {
